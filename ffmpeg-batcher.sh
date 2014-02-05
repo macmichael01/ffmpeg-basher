@@ -103,8 +103,8 @@ function muxvideos() {
   do
     # Check for invalid characters
     if [[ $mux_file != ${mux_file//[ \%\']/ } ]]; then
-      echo -e "  ${mux_file}"
       echo -e "  ${echo_bold_red}Error - Filename or path contains invalid character(s)${echo_reset_color}"
+      echo -e "  ${mux_file}"
       continue
     fi
     eval "$(printf "muxvideo -a ${mux_audio} -v  ${mux_video} ${mux_console} ${mux_logall} '${mux_file}'")"
@@ -175,6 +175,7 @@ function muxvideo() {
   # Check for invalid characters
   if [[ $mux_filename != ${mux_filename//[ \%\']/ } ]]; then
     echo -e "  ${echo_bold_red}Error - Filename or path contains invalid character(s)${echo_reset_color}"
+    echo -e "  $@"
     return
   fi
 
