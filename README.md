@@ -17,7 +17,8 @@ tested this script with other containers, so do so at your own risk. And be awar
 of what types of audio and video are supported for that container. Unsupported
 audio or video tracks will lead to errors.
 
-Usage:
+Usage
+-----
     source ffmpeg-batcher.sh
     cd /path/to/videos/dir/
     muxvideos
@@ -25,7 +26,10 @@ Usage:
     # For additional usage commands
     muxvideos -h
 
-
+Other Considerations
+--------------------
+- This script recurrsively finds videos within a directory. So it might not be a good
+  idea to mux from / or other base directory where you might not want to convert videos.
 - FFMPEG is picky about filenames with special characters. Mainly files with
   single quotes in the filename or path.
 - Although the MP4 spec declares support for TrueHD and LPCM/PCM, FFMPEG does
