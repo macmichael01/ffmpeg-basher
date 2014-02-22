@@ -17,6 +17,12 @@ tested this script with other containers, so do so at your own risk. And be awar
 of what types of audio and video are supported for that container. Unsupported
 audio or video tracks will lead to errors.
 
+NOTE:
+
+I recently added an option to transcode WMV files since these files aren't mux
+friendly.
+
+
 Usage
 -----
     source ffmpeg-batcher.sh
